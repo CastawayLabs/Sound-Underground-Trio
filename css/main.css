@@ -1,13 +1,34 @@
 body {
-	background-image: url("../images/bg.png");
+	background-attachment:fixed;
 	background-repeat: no-repeat;
 	background-position: left top;
  	-webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
+  	-moz-background-size: 100%;
+  	-o-background-size: 100%;
+  	background-size: 100%;
 	height: 100%;
 	overflow-x: hidden;
+}
+@media (min-width: 992px) {
+	body {
+		background-image: url("../images/bg.png");
+	}
+	.input-box {
+		min-width: 350px;
+	}
+}
+@media (max-width: 991px) {
+	body {
+		background-image: url("../images/mobile_bg.png");
+	}
+	.contact-text {
+		white-space: nowrap;
+		margin-left: -50%;
+		padding-right: 10%;
+	}
+	.input-box {
+		width: auto;
+	}	
 }
 h1 {
 	text-transform: uppercase;
@@ -48,11 +69,55 @@ h5 {
 	-moz-box-shadow: 10px 10px 70px -15px rgba(0,0,0,0.9);
 	box-shadow: 10px 10px 70px -15px rgba(0,0,0,0.9);
 }
+@media (min-width: 992px) {
+	.menu-push {
+		float: right;
+	}
+	.about-us-block {
+		display: block;
+		margin-left: 20%; 
+		margin-right: 10%;
+		margin-bottom: 2%;
+		border-radius: 4px;
+	}
+}
+@media (max-width: 991px) {
+	.about-us-block {
+		display: block;
+		margin-right: 5%;
+		margin-left: 5%;
+		margin-bottom: 2%;
+		border-radius: 4px;
+	}
+}
+.mobile-menu {
+	padding-top: 0;
+	padding-top: 1%;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+	border-radius: 0;
+	position: fixed;
+	top: 0;
+	min-height: 40px;
+	z-index: 10;
+}
+.mobile-menu a {
+	vertical-align: text-top;
+	color: black;
+	line-height: normal;
+	text-decoration: none !important;
+}
+.mobile-menu a:hover {
+	color: black;
+	font-weight: 800;
+	font-size: larger;
+}
 .menu {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	text-transform: uppercase;
-	margin-left: 15px;
+	margin-left: -15px;
 	float: left;
 	padding-left: 0;
 	border-radius: 25px;
@@ -85,6 +150,9 @@ h5 {
 .ptx {
 	padding-top: 20px;
 }
+.ptxs {
+	padding-top: 50px;
+}
 .pts {
 	padding-top: 80px;
 }
@@ -108,14 +176,6 @@ h5 {
 }
 form td {
   padding: 1em;
-}
-/* About US */
-.about-us-block {
-	display: block;
-	width: 50%;
-	margin-right: 10%;
-	margin-bottom: 2%;
-	border-radius: 4px;
 }
 .about-us-block h4 {
 	padding-top: 20px;
